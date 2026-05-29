@@ -1,6 +1,5 @@
 import com.example.Cat;
 import com.example.Feline;
-import com.example.Predator;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -24,7 +23,6 @@ public class CatTest {
         cat = new Cat(feline);
     }
 
-
     @Test
     public void getSoundReturnsMeow() {
         String expectedResult = "Мяу";
@@ -39,5 +37,4 @@ public class CatTest {
         List<String> actualResult = cat.getFood();
         assertEquals(expectedResult, actualResult);
     }
-
 }

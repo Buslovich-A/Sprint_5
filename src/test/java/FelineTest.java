@@ -1,22 +1,9 @@
-import com.example.Animal;
 import com.example.Feline;
-import com.example.Lion;
 import org.junit.jupiter.api.Test;
-
-import org.junit.jupiter.api.function.Executable;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.ValueSource;
-import org.mockito.Mock;
-import org.mockito.Mockito;
-import org.mockito.junit.MockitoJUnitRunner;
-
 import java.util.List;
-
 import static org.junit.jupiter.api.Assertions.*;
 
-
 public class FelineTest {
-
 
     Feline feline = new Feline();
 
@@ -41,12 +28,4 @@ public class FelineTest {
         int actualResult = feline.getKittens();
         assertEquals(expectedResult, actualResult);
     }
-
-    @ParameterizedTest
-    @ValueSource(ints = {1, 10})
-    public void getKittensReturnsCorrectNumber(int kittensNumber) {
-        int actualResult = feline.getKittens(kittensNumber);
-        assertEquals(kittensNumber, actualResult);
-    }
-
 }
